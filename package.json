@@ -1,0 +1,19 @@
+{
+    "name": "nodejs-covid-19-with-google-maps",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+        "start": "node app.js",
+        "dev": "nodemon app.js"
+    },
+    "author": "alex gd",
+    "license": "ISC",
+    "dependencies": {
+        "colors": "^1.4.0",
+        "dotenv": "^9.0.2",
+        "express": "^4.17.1",
+        "node-fetch": "^2.6.1"
+    }
+}

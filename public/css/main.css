@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+:root {
+    --primary: #f90339;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+header img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+header h1 {
+    color: var(--primary);
+}
+
+.red {
+    color: var(--primary);
+    font-size: 1.3rem;
+}
+
+main {
+    position: relative;
+    max-width: 1300px;
+    margin: auto;
+    width: 100vw;
+    min-height: calc(100vh - 80px);
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/imgs/covid_back.png');
+    opacity: .05;
+    z-index: -1;
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.loader img {
+    width: 100px;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* SELECTOR */
+
+.selector {
+    position: relative;
+    width: 55%;
+    margin: auto;
+}
+
+.selector #countries {
+    width: 100%;
+    appearance: none;
+    outline: none;
+    border: 1px solid var(--primary);
+    border-radius: 2px;
+    padding: 5px;
+    font-family: inherit;
+    font-size: 1.03rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--primary);
+    line-height: 2;
+    text-align-last: center;
+}
+
+
+/* CARD CONTAINER  */
+
+.card-container {
+    position: relative;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    padding: 5px;
+}
+
+.card {
+    background: rgba(0, 0, 0, .4);
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .2);
+    width: 70%;
+    margin: 10px auto;
+    padding: 8px;
+    color: #fff;
+}
+
+.card h1 {
+    text-align: center;
+    padding: 5px;
+    color: rgb(255, 4, 4);
+}
+
+.card .date {
+    text-align: center;
+}
+
+.card div {
+    margin: auto;
+    padding: 5px 0;
+}
+
+@media (max-width:768px) {
+    .card-container {
+        width: 95%;
+    }
+    .card {
+        width: 100%;
+    }
+    .card-inner {
+        flex-direction: column;
+    }
+}
+
+.card-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-inner div {
+    flex: 1;
+}
+
+.card-inner div.right img.map {
+    width: 100%;
+    border-radius: 5px;
+}
