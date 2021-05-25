@@ -22,6 +22,10 @@ Go to [Google Dev Console](https://console.cloud.google.com) get you API Key.
 
 Rename the env.env file in **.env**, add your **RAPIDAPI_KEY** and **GMAPS_KEY** 
 
+### Video Tutorial
+[Video Part 1](https://youtu.be/V2hKrldQBW8)
+[Video Part 2](https://youtu.be/aEggxcMkbh8)
+[Video Part 3](https://youtu.be/MhObImHkJh0)
 
 After you can start the app using this command
 > npm run start
